@@ -3,6 +3,8 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import  Screenfeed  from './src/screens/Screenfeed';
+/* screen feed 
 function Feed() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -10,7 +12,8 @@ function Feed() {
     </View>
   );
 }
-
+*/
+/* screen de profile */
 function Profile() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -18,7 +21,7 @@ function Profile() {
     </View>
   );
 }
-
+/* screen de notifcaciones */
 function Notifications() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -39,7 +42,7 @@ function MyTabs() {
     >
       <Tab.Screen
         name="Feed"
-        component={Feed}
+        component={Screenfeed}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (
