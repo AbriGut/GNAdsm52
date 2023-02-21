@@ -3,29 +3,9 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-function Feed() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed!</Text>
-    </View>
-  );
-}
-
-function Profile() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile!</Text>
-    </View>
-  );
-}
-
-function Notifications() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications!</Text>
-    </View>
-  );
-}
+import { Screenfeed } from './src/screens/Screenfeed';
+import { Screenprofile } from './src/screens/Screenprofile';
+import { Screennotifications } from './src/screens/Screennotifications';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -37,11 +17,11 @@ function MyTabs() {
       barStyle={{ backgroundColor: 'pink' }}
       initialRouteName="Feed"
       labelStyle={{ fontSize: 12 }}
-      style={{ backgroundColor: 'tomato' }}
+      //style={{ backgroundColor: 'tomato' }}
     >
       <Tab.Screen
         name="Feed"
-        component={Feed}
+        component={Screenfeed}
         options={{
           tabBarLabel: 'Feed',
           tabBarIcon: ({ color }) => (
@@ -51,7 +31,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Notifications"
-        component={Notifications}
+        component={Screennotifications}
         options={{
           tabBarLabel: 'Updates',
           tabBarIcon: ({ color }) => (
@@ -61,7 +41,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={Screenprofile}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (
