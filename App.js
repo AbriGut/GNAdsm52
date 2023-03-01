@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Screenfeed } from './src/screens/Screenfeed';
 import { Screenprofile } from './src/screens/Screenprofile';
 import { Screennotifications } from './src/screens/Screennotifications';
-
+import { Screennarticle } from './src/screens/Screenarticle';
+import { Screenother } from './src/screens/Screenother';
 const Tab = createMaterialBottomTabNavigator();
 
 function MyTabs() {
